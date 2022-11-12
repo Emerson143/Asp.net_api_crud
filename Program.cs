@@ -1,7 +1,7 @@
 using System.Security.AccessControl;
 using System.Collections.Immutable;
-
-
+using Asp.net_api_crud.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-Builder.Services.AddDbContext<UsuarioContext>(options => {
+builder.Services.AddDbContext<UsuarioContext>(options => {
     options.UseNpgsql();
 }
 );
