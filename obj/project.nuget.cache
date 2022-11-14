@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "a9C8BcI3rJhp3EdBlgjDec8Gna+BQ9I2BEenCPMsJYENlNQdWZoNTN/2g8VAyTYaKFL96i8iudu1KT0X7K/DZA==",
+  "dgSpecHash": "ls6qbYTW8Rrj3Jx0pSSZHSi0o5Sx9FwOcabRP+36tL5+NPtwwZm4phnZV/lfxhmOYHgFfxN6q1YoOaeUTaT2Vg==",
   "success": true,
   "projectFilePath": "C:\\Users\\emers\\Desktop\\Subir pro git\\asp_net_api_api\\Asp.net_api_crud\\Asp.net_api_crud.csproj",
   "expectedPackageFiles": [
@@ -44,8 +44,8 @@
     "C:\\Users\\emers\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\emers\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\emers\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
-    "C:\\Users\\emers\\.nuget\\packages\\npgsql\\6.0.7\\npgsql.6.0.7.nupkg.sha512",
-    "C:\\Users\\emers\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\6.0.7\\npgsql.entityframeworkcore.postgresql.6.0.7.nupkg.sha512",
+    "C:\\Users\\emers\\.nuget\\packages\\npgsql\\7.0.0\\npgsql.7.0.0.nupkg.sha512",
+    "C:\\Users\\emers\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.0\\npgsql.entityframeworkcore.postgresql.7.0.0.nupkg.sha512",
     "C:\\Users\\emers\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\emers\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\emers\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",

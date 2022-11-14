@@ -15,5 +15,19 @@ namespace Asp.net_api_crud.Data
         }
 
         public DbSet<Usuario> Usuarios {get; set;}
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder){
+            var usuario = modelBuilder.Entity<Usuario>();
+
+            usuario.ToTable("tb_usuario");
+            usuario.HasKey(x => x.id);
+            usuario.Property(x => x.id).HasColumnName("id").ValueGeneratedOnAdd();
+            usuario.Property(x => x.nome).HasColumnName("nome").IsRequired();
+            usuario.Property(x => x.dataMascimento).HasColumnName("data_nascimento");
+
+
+        }
+
+        
     }
 }
