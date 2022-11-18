@@ -1,5 +1,9 @@
+using Asp.net_api_crud.Data;
 using Asp.net_api_crud.model;
+using Asp.net_api_crud.Repository;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+
 
 
 namespace Asp.net_api_crud.Controllers
@@ -8,23 +12,28 @@ namespace Asp.net_api_crud.Controllers
     [Route("api/[controller]")]
     public class UsuarioController : ControllerBase
     {
-        private static List<Usuario> Usuarios()
-        {
-            return new List<Usuario>{
-                new Usuario{ nome = "Emerson", id = 1 , dataMascimento = new DateTime(1998,09,14)}
-            };
-        }
+        private readonly IUusuarioRepository _repository;
 
+        UsuarioController(IUusuarioRepository repository)
+          {
+            _repository = repository;
+        }
 
 
         [HttpGet]
 
-        public IActionResult Get()
+        public IActionResult Get() 
         {
             return Ok(Usuarios());
         }
 
-       
+        [HttpPost]
+        public IActionResult Post(Usuario usuario)
+        {
+            var usuarios = Usuarios();
+            usuarios.add(usuario);
+            return Ok(usuario);
+        }
 
     }
 }
