@@ -19,9 +19,14 @@ namespace Asp.net_api_crud.Controllers
 
 
         [HttpGet]
-        public IActionResult Get() 
+        public async Task<IActionResult> Get() 
         {
-            return Ok();
+            var usuarios = await _repository.BuscaUsuarios();
+
+            return usuarios.Any()
+            ? Ok(usuarios)
+            : NoContent();
+
         }
 
         [HttpPost]
