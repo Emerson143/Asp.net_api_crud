@@ -19,7 +19,7 @@ namespace Asp.net_api_crud.Repository
 
         public void AtualizaUsuario(Usuario usuario)
         {
-            throw new NotImplementedException();
+            _context.Update(usuario);
         }
 
         public async Task<IEnumerable<Usuario>> BuscaUsuarios()
@@ -27,9 +27,10 @@ namespace Asp.net_api_crud.Repository
             return await _context.Usuarios.ToListAsync();
         }
 
-        public Task<Usuario> BuscaUsuario(int id)
+        public async Task<Usuario> BuscaUsuario(int id)
         {
-            throw new NotImplementedException();
+             return await _context.Usuarios.Where
+             (x => x.id == id).FirstOrDefaultAsync();
         }
 
 
