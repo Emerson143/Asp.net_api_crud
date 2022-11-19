@@ -2,6 +2,8 @@ using System.Security.AccessControl;
 using System.Collections.Immutable;
 using Asp.net_api_crud.Data;
 using Microsoft.EntityFrameworkCore;
+using Asp.net_api_crud.Repository;
+using Asp.net_api_crud.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,8 @@ builder.Services.AddDbContext<UsuarioContext>(options => {
     options.UseNpgsql(builder.Configuration.GetConnectionString("Default"));
 }
 );
+
+builder.Services.AddScoped<IUusuarioRepository, UsuarioRepository>();
 
 var app = builder.Build();
 

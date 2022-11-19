@@ -1,24 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Asp.net_api_crud.Controllers;
+
 using Asp.net_api_crud.Data;
 using Asp.net_api_crud.model;
 
 namespace Asp.net_api_crud.Repository
 {
-    public class NewBaseType
-    {
-        public async Task<bool> SaveChangesAsync()
-        {
-            return await _context.SaveChangesAsync() > 0;
-        }
-    }
+    
+    
 
     public class UsuarioRepository : IUusuarioRepository
 {
-    private readonly UsuarioController _context;
+    private readonly UsuarioContext _context;
 
     public UsuarioRepository(UsuarioContext context)
     {
@@ -44,14 +35,19 @@ namespace Asp.net_api_crud.Repository
         throw new NotImplementedException();
     }
 
-    public void DeletaUsuario(Usuario usuario)
+        public Task<IEnumerable<Usuario>> BuscaUsuarios()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeletaUsuario(Usuario usuario)
     {
         throw new NotImplementedException();
     }
 
-        public Task<bool> SaveChangesAsync()
+        public async Task<bool> SaveChangesAsync()
         {
-            throw new NotImplementedException();
+           return  await _context.SaveChangesAsync() > 0;
         }
     }
 }

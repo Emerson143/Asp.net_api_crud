@@ -4,8 +4,6 @@ using Asp.net_api_crud.Repository;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
-
-
 namespace Asp.net_api_crud.Controllers
 {
     [ApiController]
@@ -14,25 +12,25 @@ namespace Asp.net_api_crud.Controllers
     {
         private readonly IUusuarioRepository _repository;
 
-        UsuarioController(IUusuarioRepository repository)
-          {
+        public UsuarioController(IUusuarioRepository repository)
+        {
             _repository = repository;
         }
 
 
         [HttpGet]
-
         public IActionResult Get() 
         {
-            return Ok(Usuarios());
+            return Ok();
         }
 
         [HttpPost]
-        public IActionResult Post(Usuario usuario)
+        public async Task<IActionResult> Post(Usuario usuario)
         {
-            var usuarios = Usuarios();
-            usuarios.add(usuario);
-            return Ok(usuario);
+            _repository.AdicionaUsuario(usuario);
+            return await _repository.SaveChangesAsync()
+             ? Ok("usuário Adicionado com sucesso")
+             : BadRequest("Erro ao salvar usuário");
         }
 
     }

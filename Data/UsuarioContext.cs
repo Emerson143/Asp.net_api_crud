@@ -23,7 +23,7 @@ namespace Asp.net_api_crud.Data
             usuario.HasKey(x => x.id);
             usuario.Property(x => x.id).HasColumnName("id").ValueGeneratedOnAdd();
             usuario.Property(x => x.nome).HasColumnName("nome").IsRequired();
-            usuario.Property(x => x.dataMascimento).HasColumnName("data_nascimento");
+            usuario.Property(x => x.dataNascimento).HasColumnName("data_nascimento");
 
 
         }

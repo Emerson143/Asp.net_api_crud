@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AVkzEp4ISmxT6spAKNSFHcqx8w9nyXCEj0962/l+18ZAvPgQRjgdwHpQP9dyqCxaf6g9txe4yQ+YtodaO1zHGA==",
+  "dgSpecHash": "ls6qbYTW8Rrj3Jx0pSSZHSi0o5Sx9FwOcabRP+36tL5+NPtwwZm4phnZV/lfxhmOYHgFfxN6q1YoOaeUTaT2Vg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\emers\\Desktop\\Subir pro git\\asp_net_api_api\\Asp.net_api_crud\\Asp.net_api_crud.csproj",
+  "projectFilePath": "C:\\Users\\emers\\Desktop\\Subir pro git\\asp_net_api_api\\Asp.net_api_crud\\Asp.net_api_crud.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emers\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\emers\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

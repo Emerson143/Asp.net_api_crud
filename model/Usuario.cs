@@ -7,6 +7,6 @@ namespace Asp.net_api_crud.model
 
         public string nome {get ; set; }
 
-        public DateTime dataMascimento {get; set;}
+        public DateTime dataNascimento {get; set;}
     }
 }
