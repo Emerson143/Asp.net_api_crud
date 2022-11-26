@@ -50,12 +50,12 @@ namespace Asp.net_api_crud.Controllers
              : BadRequest("Erro ao salvar usuário");
         }
 
-        [HttpPut("{id^}")]
+        [HttpPut("{id}")]
             public async Task<IActionResult> Put(int id, Usuario usuario)
             {
                 var usuarioBanco = await _repository.BuscaUsuario(id);
                 if(usuarioBanco == null)
-                    NotFound("Usuario não encontrado");
+                   return NotFound("Usuario não encontrado");
 
                    usuarioBanco.nome = usuario.nome ?? usuarioBanco.nome;
                    usuarioBanco.dataNascimento = usuario.dataNascimento != new DateTime()

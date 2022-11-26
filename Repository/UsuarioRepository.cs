@@ -29,7 +29,8 @@ namespace Asp.net_api_crud.Repository
 
         public async Task<Usuario> BuscaUsuario(int id)
         {
-             return await _context.Usuarios.Where
+             return await _context.Usuarios.
+             Where
              (x => x.id == id).FirstOrDefaultAsync();
         }
 
